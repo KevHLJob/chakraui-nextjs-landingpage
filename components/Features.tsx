@@ -1,121 +1,49 @@
-import {
-    Box,
-    Button,
-    Container,
-    Flex,
-    Heading,
-    Icon,
-    Stack,
-    Text,
-    useColorModeValue,
-  } from '@chakra-ui/react';
-  import { ReactElement } from 'react';
-  import {
-    FcAbout,
-    FcAssistant,
-    FcCollaboration,
-    FcDonate,
-    FcManager,
-  } from 'react-icons/fc';
-  
-  interface CardProps {
-    heading: string;
-    description: string;
-    icon: ReactElement;
-    href: string;
+import { Container, Box, chakra, Text, Icon, SimpleGrid } from '@chakra-ui/react';
+// Here we have used react-icons package for the icons
+import { MdOutlinePersonPin, MdPermDeviceInformation, MdOutlineFlashlightOn } from 'react-icons/md';
+import { SiMinds } from 'react-icons/si';
+import { IconType } from 'react-icons';
+
+interface IFeature {
+  heading: string;
+  icon: IconType;
+}
+
+const features: IFeature[] = [
+  {
+    heading: 'Responsabilidad',
+    icon: MdOutlineFlashlightOn
+  },
+  {
+    heading: 'Compromiso',
+    icon: SiMinds
+  },
+  {
+    heading: 'Profesionalismo',
+    icon: MdPermDeviceInformation
+  },
+  {
+    heading: 'Calidad',
+    icon: MdOutlinePersonPin
   }
-  
-  const Card = ({ heading, description, icon}: CardProps) => {
-    return (
-      <Box
-        maxW={{ base: 'full', md: '275px' }}
-        w={'full'}
-        borderWidth="1px"
-        borderRadius="lg"
-        overflow="hidden"
-        p={5}>
-        <Stack align={'start'} spacing={2}>
-          <Flex
-            w={16}
-            h={16}
-            align={'center'}
-            justify={'center'}
-            color={'white'}
-            rounded={'full'}
-            bg={useColorModeValue('gray.100', 'gray.700')}>
-            {icon}
-          </Flex>
-          <Box mt={2}>
-            <Heading size="md">{heading}</Heading>
-            <Text mt={1} fontSize={'sm'}>
-              {description}
-            </Text>
+];
+
+export default function Feature () {
+  return (
+    <Container maxW="6xl" p={{ base: 5, md: 10 }}>
+      <chakra.h3 fontSize="4xl" fontWeight="bold" mb={3} textAlign="center">
+        Nuestros valores
+      </chakra.h3>
+      <SimpleGrid columns={{ base: 1, md: 2 }} placeItems="center" spacing={16} mt={12} mb={4}>
+        {features.map((feature, index) => (
+          <Box key={index} textAlign="center">
+            <Icon as={feature.icon} w={10} h={10} color="blue.500" />
+            <chakra.h3 fontWeight="semibold" fontSize="2xl">
+              {feature.heading}
+            </chakra.h3>
           </Box>
-          <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-            Learn more
-          </Button>
-        </Stack>
-      </Box>
-    );
-  };
-  
-  export default function Features() {
-    return (
-      <Box p={2}>
-        <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-          <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-            Short heading
-          </Heading>
-          <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
-            obcaecati ut cupiditate pariatur, dignissimos, placeat amet officiis.
-          </Text>
-        </Stack>
-  
-        <Container maxW={'5xl'} mt={12}>
-          <Flex flexWrap="wrap" gridGap={6} justify="center">
-            <Card
-              heading={'Heading'}
-              icon={<Icon as={FcAssistant} w={10} h={10} />}
-              description={
-                'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
-              }
-              href={'#'}
-            />
-            <Card
-              heading={'Heading'}
-              icon={<Icon as={FcCollaboration} w={10} h={10} />}
-              description={
-                'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
-              }
-              href={'#'}
-            />
-            <Card
-              heading={'Heading'}
-              icon={<Icon as={FcDonate} w={10} h={10} />}
-              description={
-                'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
-              }
-              href={'#'}
-            />
-            <Card
-              heading={'Heading'}
-              icon={<Icon as={FcManager} w={10} h={10} />}
-              description={
-                'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
-              }
-              href={'#'}
-            />
-            <Card
-              heading={'Heading'}
-              icon={<Icon as={FcAbout} w={10} h={10} />}
-              description={
-                'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
-              }
-              href={'#'}
-            />
-          </Flex>
-        </Container>
-      </Box>
-    );
-  }
+        ))}
+      </SimpleGrid>
+    </Container>
+  );
+};

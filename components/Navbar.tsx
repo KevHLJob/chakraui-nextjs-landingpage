@@ -5,10 +5,7 @@ import {
   Link,
   useColorModeValue,
   Text,
-  useColorMode,
 } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
     px={2}
@@ -28,8 +25,8 @@ export default function Nav() {
     <>
       <Box bg={useColorModeValue('blackAlpha.900', 'blue.700')} px={4}>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <Box color={'#FFFFFF'} fontWeight={700} fontSize={'2xl'}>Kev
-          <Text as={'span'} color={'teal.200'}>Dev</Text>
+          <Box color={'#FFFFFF'} fontWeight={700} fontSize={'2xl'}>WSD
+          <Text as={'span'} color={'blue.300'}>Servicios</Text>
           </Box>
         </Flex>
       </Box>
