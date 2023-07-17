@@ -1,4 +1,4 @@
-import { Container, Box, chakra, Text, Icon, SimpleGrid } from '@chakra-ui/react';
+import { Container, Box, chakra, Icon, SimpleGrid } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { MdOutlinePersonPin, MdPermDeviceInformation, MdOutlineFlashlightOn } from 'react-icons/md';
 import { SiMinds } from 'react-icons/si';
@@ -30,7 +30,7 @@ const features: IFeature[] = [
 
 export default function Feature () {
   return (
-    <Container maxW="6xl" p={{ base: 5, md: 10 }}>
+    <Container maxW="6xl" p={{ base: 5, md: 10 }} >
       <chakra.h3 fontSize="4xl" fontWeight="bold" mb={3} textAlign="center">
         Nuestros valores
       </chakra.h3>
