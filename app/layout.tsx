@@ -1,11 +1,7 @@
 'use client'
-import type { Metadata } from 'next'
 import { ChakraProvider } from '@chakra-ui/react'
 import  Navbar   from "@/components/Navbar"
-export const metadata: Metadata = {
-  title: 'WSD Servicios',
-  description: 'brinda servicios de diseño de obras de construcción eléctricas y mecánicas, Certificación, instalación de GLP conversión de vehiculos de carga, visado de planos eléctricos'
-}
+
 
 export default function RootLayout({
   children,
