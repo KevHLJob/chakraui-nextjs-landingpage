@@ -9,7 +9,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" title='Wanner Servicios'>
+      <meta name='Wanner Servicios'
+      content='Servicios de Ingeniería electromecánica'/>
       <body>
         <ChakraProvider>
           <Navbar />
