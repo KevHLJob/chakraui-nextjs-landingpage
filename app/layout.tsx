@@ -4,8 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import  Navbar   from "@/components/Navbar"
 export const metadata: Metadata = {
   title: 'WSD Servicios',
-  description: 'Servicios Ing Wanner, brinda servicios de diseño de obras de construcción,'
-  +'eléctricas y mecánicas, Certificación, instalación de GLPconversión de vehiculos de carga, visado de planos eléctricos',
+  description: 'brinda servicios de diseño de obras de construcción eléctricas y mecánicas, Certificación, instalación de GLP conversión de vehiculos de carga, visado de planos eléctricos'
 }
 
 export default function RootLayout({
