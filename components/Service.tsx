@@ -37,7 +37,7 @@ export default function Service() {
           alt="Diseño e inspección de obras eléctricas y mecánicas">
         </Image>
         <CardHeader>
-          <Heading size='md'>Electrica</Heading>
+          <Heading size='md'>Eléctrica</Heading>
         </CardHeader>
         <CardBody>
           <Text>Diseño e inspección de obras eléctricas y mecánicas.</Text>

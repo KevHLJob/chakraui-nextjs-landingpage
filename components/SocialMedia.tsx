@@ -37,8 +37,8 @@ export default function  SocialMedia() {
             Contáctenos
           </chakra.h1>
           <chakra.h1 color="gray.400" fontSize="xl" maxW="600px" lineHeight={1.2} textAlign={'justify'}>
-            Por medio de Facebook o Whatsapp puede contactarnos y
-            solicitar el servicio que necesite, será un gusto atenderle.
+            Contácteme por medio de Facebook o Whatsapp y
+            solicita el servicio que necesites, será un gusto atenderle.
           </chakra.h1>
 
           <Stack justifyContent={'center'} direction={{ base: 'column', md: 'row' }} spacing={3}>
